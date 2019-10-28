@@ -1,0 +1,12 @@
+# Dependency directory
+node_modules
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+# Ignore build ts files
+dist/**/*
+
+# Ignore yarn.lock
+yarn.lock
