@@ -4,8 +4,9 @@
   "main": "dist/app.js",
   "license": "MIT",
   "scripts": {
-    "start": "tsc && nodemon dist/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --inspect=5858 -r ts-node/register ./src/app.ts",
+    "start:watch": "nodemon",
+    "build": "tsc"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -20,6 +21,7 @@
     "@reactivex/rxjs": "^6.5.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "graphql-yoga": "^1.18.3"
+    "graphql-yoga": "^1.18.3",
+    "ts-node": "^8.4.1"
   }
 }

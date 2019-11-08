@@ -6,6 +6,6 @@ export const typeDefs = `
 
   type Query {
     hello(name: String): String!
-    helloUser(name: String, age: Int): String
+    helloUser(name: String, age: Int): User
   }
 `;

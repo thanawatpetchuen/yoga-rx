@@ -1,14 +1,21 @@
-class User {
+export class User {
   name: string;
-  age: string;
+  age: number;
 
-  constructor(name: string, age: string) {
+  constructor(name: string, age: number) {
     this.name = name;
     this.age = age;
   }
 
-  get username(): string {
-    return this.name;
+  get info(): { name: string, age: number } {
+    return {
+      name: this.name,
+      age: this.age,
+    };
   }
 
 }
+// export interface User {
+//   name: string,
+//   age: number,
+// }
