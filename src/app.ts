@@ -1,18 +1,9 @@
 import "dotenv/config";
 
 import { GraphQLServer } from "graphql-yoga";
+import { resolvers } from './resolvers';
+import { typeDefs } from './typeDefs';
 
-const typeDefs = `
-  type Query {
-    hello(name: String): String!
-  }
-`;
-
-const resolvers = {
-  Query: {
-    hello: (_, { name }) => `Hello ${name || "World"}`,
-  },
-};
 
 const options = {
   endpoint: "/graphql",
